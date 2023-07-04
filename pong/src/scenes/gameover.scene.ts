@@ -1,3 +1,4 @@
+import { input1, input2 } from "../input";
 import IScene from "./scene";
 import SCENESMANAGER from "./scenes.manager";
 
@@ -7,8 +8,8 @@ export default class GameoverScene implements IScene{
 
     update(dt: number): void {
      this.countdown -= dt;
-     if(this.countdown<=0){
-        SCENESMANAGER.popScene();
+     if(input1.restart || input2.restart){
+        location.reload();
      }
     }
     

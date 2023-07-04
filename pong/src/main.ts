@@ -22,13 +22,13 @@ const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 const GAME = new Game();
 
 document.onkeydown = (e:KeyboardEvent) => {
-  if(e.key === 'w'||e.key === 's'||e.key === 'ArrowDown'||e.key === 'ArrowUp'){
+  if(e.key === 'w'||e.key === 's'||e.key === 'ArrowDown'||e.key === 'ArrowUp'||e.key === 'r'){
     GAME.keydown(e.key)
   }
 }
 
 document.onkeyup = (e:KeyboardEvent) => {
-  if(e.key === 'w'||e.key === 's'||e.key === 'ArrowDown'||e.key === 'ArrowUp'){
+  if(e.key === 'w'||e.key === 's'||e.key === 'ArrowDown'||e.key === 'ArrowUp'||e.key === 'r'){
     GAME.keyup(e.key)
   }
 }

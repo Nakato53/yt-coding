@@ -8,7 +8,7 @@ export default class Game{
     
     constructor(){
         SCENESMANAGER.addScene(new PlayScene());
-        SCENESMANAGER.addScene(new GameoverScene());
+        SCENESMANAGER.addScene(new StartScene());
     }
 
     update(dt:number):void{
@@ -23,12 +23,18 @@ export default class Game{
             case 's':
                 input1.down = true;
                 break;
+            case 'r':
+                input1.restart = true;
+                break;
         
             case 'ArrowUp':
                 input2.up = true;
                 break;
             case 'ArrowDown':
                 input2.down = true;
+                break;
+            case ' ':
+                input2.restart = true;
                 break;
             default:
                 break;
@@ -43,12 +49,18 @@ export default class Game{
             case 's':
                 input1.down = false;
                 break;
+            case 'r':
+                input1.restart = false;
+                break;
         
             case 'ArrowUp':
                 input2.up = false;
                 break;
             case 'ArrowDown':
                 input2.down = false;
+                break;
+            case ' ':
+                input2.restart = false;
                 break;
             default:
                 break;

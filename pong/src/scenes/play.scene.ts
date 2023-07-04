@@ -2,7 +2,9 @@ import Ball from "../ball";
 import { GAME_HEIGHT, GAME_WIDTH } from "../config";
 import { input1, input2 } from "../input";
 import Paddle from "../paddle";
+import GameoverScene from "./gameover.scene";
 import Scene from "./scene";
+import SCENESMANAGER from "./scenes.manager";
 
 export default class PlayScene implements Scene{
     joueur1:Paddle = new Paddle();
@@ -49,6 +51,7 @@ export default class PlayScene implements Scene{
             this.balle.x+this.balle.w >= GAME_WIDTH ||
             this.balle.x <= 0
         ){
+            SCENESMANAGER.addScene(new GameoverScene());
             //game over
         }
     }

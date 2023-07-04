@@ -1,12 +1,12 @@
 import { GAME_HEIGHT, GAME_WIDTH } from "./config";
 
 export default class Ball{
-    x:number = 50;
-    y:number = 50;
+    x:number = GAME_WIDTH/2;
+    y:number = GAME_HEIGHT/2;
     w:number = 4;
     h:number = 4;
-    vx:number = 1;
-    vy:number = 1;
+    vx:number = Math.random() * 2 -1;
+    vy:number = Math.random() * 2 -1;
 
     constructor() {
         
@@ -19,10 +19,15 @@ export default class Ball{
 
     bouncePaddle(){
         this.vx*=-1;
+
+        this.vx+= this.vx > 0 ? 0.1 : -0.1;
+        this.vy+= this.vy > 0 ? 0.1 : -0.1;
     }
 
     bounceFloor(){
         this.vy*=-1;
+        this.vx+= this.vx > 0 ? 0.1 : -0.1;
+        this.vy+= this.vy > 0 ? 0.1 : -0.1;
     }
 
     getRectangle():Rectangle{
