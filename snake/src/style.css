@@ -1,0 +1,23 @@
+@font-face {
+  font-family: minecraft;
+  src: url(Minecraft.ttf);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(28, 12, 59);
+  color: white;
+  font-family: minecraft;
+
+}
+
+canvas{
+  border: 3px solid rgb(59, 109, 74);
+  background-color: #c7f0d8;
+}

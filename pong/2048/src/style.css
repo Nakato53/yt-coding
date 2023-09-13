@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: minecraft;
+  src: url(Minecraft.ttf);
+}
+
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #221321;
+  height: 100vh;
+  flex-direction: column;
+  color: white;
+  font-family: 'minecraft';
+}
+
+canvas{
+  background: #B4A897;
+  border: 2px solid white;
+  font-family: 'minecraft';
+}
